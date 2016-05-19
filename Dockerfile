@@ -1,3 +1,3 @@
-FROM ubuntu
+FROM onsdigital/java-component
 
-RUN apt-get install -y nodejs
+RUN apt-get install -y curl tar bzip2
