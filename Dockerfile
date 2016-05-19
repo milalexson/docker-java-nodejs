@@ -5,4 +5,4 @@ RUN export JAVA_HOME=/usr/bin
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 
 ADD startCMD.sh /root
-RUN chmod 755 startCMD.sh
+RUN chmod 700 /root/startCMD.sh
