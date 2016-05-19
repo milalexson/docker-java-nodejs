@@ -1,1 +1,1 @@
-"# docker-java-nodejs" 
+Docker container with support for both Java & NodeJS. The container also has a start.sh script to deploy the application. The start script pulls the binaries from S3, extracts and launches the application. Docker image to be used with Apcera.
