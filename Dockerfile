@@ -1,5 +1,5 @@
 FROM ubuntu
-MAINTAINER Miladin Tripic
+MAINTAINER Miladin
 
 RUN apt-get install default-jdk -y
 RUN apt-get install nodejs -y
