@@ -17,4 +17,4 @@ signature=`/bin/echo -en "$stringToSign" | openssl sha1 -hmac ${s3Secret} -binar
 curl -H "Date: ${dateValue}" -H "Content-Type: ${contentType}" -H "Authorization: AWS ${s3Key}:${signature}" "https://${endPoint}${resource1}" -o ${file1}
 tar -zxvf ${file1}
 cd ${file2}
-nodejs ${script} -p .${properties} --jar-path ./lib -j /usr/bin/java -e
+# nodejs ${script} -p .${properties} --jar-path ./lib -j /usr/bin/java -e
