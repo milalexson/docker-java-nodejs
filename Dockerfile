@@ -3,8 +3,12 @@
 # Script relies on environment variables being passed to the docker image on creation.
 
 FROM ubuntu
-
-RUN apt-get install -y vim wget curl nodejs default-jdk
+RUN apt-get update && apt-get install -y \
+        vim \
+        wget \
+        curl \
+	nodejs \
+	default-jdk
 RUN export JAVA_HOME=/usr/bin
 RUN ln -s /usr/bin/nodejs /usr/bin/node
 
