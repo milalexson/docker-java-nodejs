@@ -16,5 +16,6 @@ stringToSign="GET\n\n${contentType}\n${dateValue}\n${resource1}"
 signature=`/bin/echo -en "$stringToSign" | openssl sha1 -hmac ${s3Secret} -binary | base64` 
 curl -H "Date: ${dateValue}" -H "Content-Type: ${contentType}" -H "Authorization: AWS ${s3Key}:${signature}" "https://${endPoint}${resource1}" -o ${file1}
 tar -zxvf ${file1}
+cp -avr /root/${file2}/lib/ /root/lib/
 cd ${file2}
-nodejs ${script} -p .${properties} --jar-path ./lib -j /usr/bin/java -e
+nodejs ${script} -p .${properties} -j /usr/bin/java -e
